@@ -1,15 +1,16 @@
 # AppWebTp2
 
-Proyecto Web que permite ingresar, leer, editar y eliminar los datos de una TABLA DE TAREAS ASIGNADAS en el desarrollo de una aplicación web con PHP.
+### Proyecto Web que permite ingresar, leer, editar y eliminar los datos de una TABLA DE TAREAS ASIGNADAS en el desarrollo de una aplicación web con PHP.
 
 La Base de datos deberá incluir dos tablas:
 
-- ** Tabla de integrantes del equipo**
-Sólo contendrá los datos de los participantes del equipo de trabajo
+- **Tabla de integrantes del equipo**
 
-- ** Tabla de tareas** 
+	Sólo contendrá los datos de los participantes del equipo de trabajo.
 
-	Deberá contener los siguientes campos
+- **Tabla de tareas** 
+
+	- Deberá contener los siguientes campos:
 
 		- ID de la tarea: 
 		- Fecha de asignación de la tarea
@@ -17,8 +18,8 @@ Sólo contendrá los datos de los participantes del equipo de trabajo
 		- Tiempo asignado para el cumplimiento de la tarea
 		- Integrante del equipo al que se asigna la tarea
 		- Observaciones
-	
-	Para tener en cuenta:
-	
+
+	- Para tener en cuenta:
+
 		- Uds eligen los nombres de los campos, en la lista anterior sólo se describe el propósito de cada uno de ellos
-		- Pueden agregarse campos adicionales, si lo consideran necesario
+		- Pueden agregarse campos adicionales, si lo consideran necesario.
