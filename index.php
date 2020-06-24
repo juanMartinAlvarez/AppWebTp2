@@ -1,7 +1,17 @@
-<?php
+ 
+<head>
+  
+</head>
+<body>
+  
+
+<a href="?conectar">conectar</a>
+<a href="botones.php">botones</a>
+</body>
+  <?php
    include("conexion.php");
 
-   $con = conectar();
-   echo $con;
- 
-?>
+
+    if(isset($_GET['conectar'])) echo conectar();
+
+  ?>

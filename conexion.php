@@ -10,7 +10,7 @@ function conectar(){
 
  $conexion = new mysqli($s,$u,$p);
 
- $sql = "CREATE DATABASE IF NOT EXISTS jueves";
+ $sql = "CREATE DATABASE IF NOT EXISTS $db";
    if($conexion->query($sql) === true){
       echo "Base de datos creada correctamente...";
    }else{
