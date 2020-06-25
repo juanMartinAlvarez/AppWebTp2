@@ -84,7 +84,7 @@ if($conexion->query($sql) === true){
       die("Error al añadir tarea: " . $conexion->error);
    }
 
-   $sql=  "INSERT INTO `tareas`(`fecha`, `descripcion`, `tiempoasignado`, `integranteasignado`, `observaciones`) VALUES (2020-06-25,'Armar el estilo','5 horas',2,'Para que sea amigable al usuario')";
+   $sql=  "INSERT INTO `tareas`(`fecha`, `descripcion`, `tiempoasignado`, `integranteasignado`, `observaciones`) VALUES ('2020-06-25','Armar el estilo','5 horas',2,'Para que sea amigable al usuario')";
    if($conexion->query($sql) === true){
       return "Nuevo tarea añadida...";
    }else{

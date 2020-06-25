@@ -7,14 +7,15 @@ $listaTareas = obtenerTareas();
 
 <?php
 if(isset($_GET['obtenerTareas'])) foreach($listaTareas as $tarea) {?>      
-<tr>
-	<td><?php echo $tarea->getid()?></td>
-	<td><?php echo $tarea->getfecha() ?> </td>
-	<td><?php echo $tarea->getdescripcion() ?> </td>
-	<td><?php echo $tarea->gettiempoasignado() ?> </td>
-	<td><?php echo $tarea->getintegranteasignado() ?> </td>
-	<td><?php echo $tarea->getidintegranteasignado() ?> </td>
+<tr><br>
+	<td><?php echo $tarea->getid().' ||'?></td>
+	<td><?php echo $tarea->getfecha().' ||' ?> </td>
+	<td><?php echo $tarea->getdescripcion().' ||' ?> </td>
+	<td><?php echo $tarea->gettiempoasignado().' ||' ?> </td>
+	<td><?php echo $tarea->getintegranteasignado().' ||' ?> </td>
+	<td><?php echo $tarea->getidintegranteasignado().' ||' ?> </td>
 	<td><?php echo $tarea->getobservaciones() ?> </td>
+  </br>
 </tr>
 <?php 
 } ?>
