@@ -33,6 +33,7 @@
         <td><?php echo $tarea->getdescripcion() ?> </td>
         <td><?php echo $tarea->gettiempoasignado() ?> </td>
         <td><?php echo $tarea->getintegranteasignado() ?> </td>
+        <td><?php echo $tarea->getidintegranteasignado() ?> </td>
         <td><?php echo $tarea->getobservaciones() ?> </td>
     </tr>
 

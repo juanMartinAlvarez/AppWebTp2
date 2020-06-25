@@ -5,6 +5,7 @@
 		private $descripcion;
 		private $tiempoasignado;
 		private $integranteasignado;
+		private $idintegranteasignado;
 		private $observaciones;
 
 		function __construct(){}
@@ -48,6 +49,14 @@
 		public function setintegranteasignado($integranteasignado){
 			$this->integranteasignado = $integranteasignado;
 		}
+		
+		public function getidintegranteasignado(){
+			return $this->idintegranteasignado;
+		}
+
+		public function setidintegranteasignado($idintegranteasignado){
+			$this->idintegranteasignado = $idintegranteasignado;
+		}
 
 		public function getobservaciones(){
 			return $this->observaciones;
@@ -59,3 +68,4 @@
 					
 
 	}
+?>

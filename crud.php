@@ -22,7 +22,7 @@ function obtenerTareas()
   $conexion = conectar();
 
 
-  $sql = 'SELECT * FROM tareas';
+  $sql = 'SELECT t.id, t.fecha, t.descripcion, t.tiempoasignado, t.integranteasignado, t.observaciones, i.nombre FROM tareas t, integrantes i WHERE t.integranteasignado=i.id';
   if ($conexion->query($sql)) {
     $result = $conexion->query($sql);
     $listadetareas = [];
@@ -30,13 +30,14 @@ function obtenerTareas()
     if ($result->num_rows > 0) {
       //muestra los resultados en filas
       while ($row = $result->fetch_assoc()) {
-        $myTarea = new Tarea();
+         $myTarea = new Tarea();
         $myTarea->setId($row['id']);
         $myTarea->setFecha($row['fecha']);
         $myTarea->setdescripcion($row['descripcion']);
         $myTarea->settiempoasignado($row['tiempoasignado']);
         $myTarea->setintegranteasignado($row['integranteasignado']);
         $myTarea->setobservaciones($row['observaciones']);
+        $myTarea->setidintegranteasignado($row['nombre']);
         $listadetareas[]=$myTarea;
         //echo "<br> id: " . $row["id"] . " - Fecha: " . $row["fecha"] . " || Descripcion: " . $row["descripcion"] . " || Tiempo asignado: " . $row["tiempoasignado"] . " || Integrante asignado: " . $row["integranteasignado"] . " || Observaciones: " . $row["observaciones"] . " <br>";
       }
@@ -80,3 +81,4 @@ function modificarTareas($value, $id){
       echo die("Error al actualizar la tarea: " . $conexion->connect_error);
     }
 }
+?>
