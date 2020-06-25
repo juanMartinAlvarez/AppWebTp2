@@ -12,17 +12,31 @@
   <h2>
     Lista de tareas actualmente en la base de datos
   </h2>
+
+    <?php
+    require_once('crud.php');
+
+    $listaTareas = obtenerTareas();
+    ?>
   
 
     <a href="llenarcamposintegrantes.php">crear tarea </a><br> <br>
 
     <a href="?obtenerTareas">obtener tareas </a> <br> <br>
     <?php
-    include("crud.php");
+  
 
-    if(isset($_GET['obtenerTareas'])) echo obtenerTareas();
+    if(isset($_GET['obtenerTareas'])) foreach($listaTareas as $tarea) {?>      
+    <tr>
+        <td><?php echo $tarea->getid()?></td>
+        <td><?php echo $tarea->getfecha() ?> </td>
+        <td><?php echo $tarea->getdescripcion() ?> </td>
+        <td><?php echo $tarea->gettiempoasignado() ?> </td>
+        <td><?php echo $tarea->getintegranteasignado() ?> </td>
+        <td><?php echo $tarea->getobservaciones() ?> </td>
+    </tr>
 
-    ?>
+    <?php } ?>
     
     <h2>modificar tareas</h2>
 
@@ -38,9 +52,6 @@
             $idtareamodif = $_POST['idtareamodif'];
 
             echo modificarTareas($idintegrante, $idtareamodif);
-
-            echo "Tareas existentes";
-            echo obtenerTareas();
           }
         ?>
 
@@ -61,8 +72,6 @@
 
             echo borrarTarea($idtareaborrar);
 
-            echo "Tareas existentes";
-            echo obtenerTareas();
           }
         ?>
       </div>
