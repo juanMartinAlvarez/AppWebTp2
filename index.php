@@ -54,7 +54,7 @@
 				</tr>
 				<tr>
 				  <th scope="row">3</th>
-				  <td>Fernandol</td>
+				  <td>Fernando</td>
 				  <td>Lamas</td>
 				</tr> 
 			  </tbody>
