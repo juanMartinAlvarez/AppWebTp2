@@ -62,7 +62,7 @@
 
 			
 			<button class="btn btn-primary btn-lg" onclick="location.href='?conectar'" >conectar</button>
-			<button class="btn btn-primary btn-lg" onclick="location.href='botones.php'" >botones</button>
+			<button class="btn btn-primary btn-lg" onclick="location.href='botones.php'" >Crud</button>
  		  </section>
 
 	   </section>
