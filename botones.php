@@ -6,8 +6,10 @@ $listaTareas = obtenerTareas();
 ?>
 
 <?php
-if(isset($_GET['obtenerTareas'])) foreach($listaTareas as $tarea) {?>      
-<tr><br>
+if(isset($_GET['obtenerTareas']))
+echo ' ID || FECHA || DESCRIPCION || TIEMPO ASIGNADO || ID INTEGRANTE || INTEGRANTE ASIGNADO || OBSERVACIONES'; 
+ foreach($listaTareas as $tarea) {?> 
+  <tr><br>
 	<td><?php echo $tarea->getid().' ||'?></td>
 	<td><?php echo $tarea->getfecha().' ||' ?> </td>
 	<td><?php echo $tarea->getdescripcion().' ||' ?> </td>
